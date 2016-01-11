@@ -1,6 +1,6 @@
 #include "Node.h"
 #include <malloc.h>
-
+//Noting
 /*Node::Node(){
   next=NULL;
   obj=NULL;
