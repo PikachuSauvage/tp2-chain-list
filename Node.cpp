@@ -37,12 +37,12 @@ Node::Node(){
 
 Node::Node(const Node& model){
   if (model.next != nullptr){
-    next = new Node(const *(model.next));
+    next = new Node(*(model.next));
     }
   else{
     next = nullptr;
     }
-  obj = model.obj;
+  obj = new Vector(model.obj);
   }
 
 Node::Node(Node* ptra,void* ptrb){
