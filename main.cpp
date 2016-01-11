@@ -1,6 +1,7 @@
+#include "Vector.h"
 #include "Node.h"
 #include <iostream>
-//#include "Vector.h"
+#include <cstdlib>
 using std::cout;
 using std::endl;
 int main(){
