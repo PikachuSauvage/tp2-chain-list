@@ -7,9 +7,10 @@ class Node{
   Vector* obj;
   Node* next;
  public:
-  //Node(const Node& model);
+  Node(const Node& model);
   Node(const Vector& model);
-  //Node();
+  Node();
+  Node(Node* ptra,void* ptrb);
   Vector* get_obj();
   Node* get_next();
   void set_obj(Vector* model);
