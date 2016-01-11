@@ -19,6 +19,7 @@ Node::Node(const Vector& model){
   obj=newadr;
 }
 
+//Getters
 Vector* Node::get_obj(){
   return obj;
 }
@@ -27,10 +28,27 @@ Node* Node::get_next(){
   return next;
 }
 
+//Setters
 void Node::set_obj(Vector* model){
   obj=model;
 }
 
 void Node::set_next(Node* node){
   next=node;
+}
+
+//Autres constructeurs
+Node::Node(){
+  next=nullptr;
+  obj=nullptr;
+}
+	
+Node::Node(const Node& noeud){
+  next=noeud.ptrToNext;
+  obj=noeud.ptrToObj;
+}
+
+Node::Node(Node* ptra,void* ptrb){
+  next=ptra;
+  obj=ptrb;
 }
