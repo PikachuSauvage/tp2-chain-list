@@ -1,28 +1,24 @@
 #include "Node.h"
 #include <malloc.h>
-#include <cstddef>
-#include <iostream>
 
-Node::Node(){
-  next = nullptr;
-  obj = new Vector();
-  }
+//Noting
+/*Node::Node(){
+  next=NULL;
+  obj=NULL;
+  }*/
 
+/*Node::Node(const Node& model){
+  //assert?
+  next=NULL;//?
+  obj=model.obj;
+  }*/
 
-Node::Node(const Node& model){
-  if (model.next != nullptr){
-    next = new Node(const *(model.next));
-    }
-  else{
-    next = nullptr;
-    }
-  obj = model.obj;
-  }
-
-Node::Node(const Vector& vec){
-  next = nullptr;
-  obj = new Vector(vec);
-  }
+Node::Node(const Vector& model){
+  Vector* newadr = new Vector;
+  Vector newobj = Vector(model);
+  next=NULL;
+  obj=newadr;
+}
 
 //Getters
 Vector* Node::get_obj(){
