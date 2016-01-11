@@ -42,14 +42,19 @@ void Node::set_next(Node* node){
 
 //Autres constructeurs
 Node::Node(){
-  next=nullptr;
-  obj=nullptr;
-}
-	
-Node::Node(const Node& noeud){
-  next=noeud.ptrToNext;
-  obj=noeud.ptrToObj;
-}
+  next = nullptr;
+  obj = new Vector();
+  }
+
+Node::Node(const Node& model){
+  if (model.next != nullptr){
+    next = new Node(const *(model.next));
+    }
+  else{
+    next = nullptr;
+    }
+  obj = model.obj;
+  }
 
 Node::Node(Node* ptra,void* ptrb){
   next=ptra;
