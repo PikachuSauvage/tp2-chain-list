@@ -49,3 +49,9 @@ Node::Node(Node* ptra,void* ptrb){
   next=ptra;
   obj=ptrb;
 }
+
+//Destructeur
+Node::~Node(){
+  delete next;
+  delete obj;
+  }
