@@ -3,10 +3,8 @@
 
 
 Node::Node(const Vector& model){
-  Vector* newadr = new Vector;
-  Vector newobj = Vector(model);
+  obj = new Vector(model);
   next=NULL;
-  obj=newadr;
 }
 
 //Getters
