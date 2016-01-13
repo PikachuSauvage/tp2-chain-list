@@ -28,6 +28,7 @@ void List::pushback(Node* node){
 		ptr=(*ptr).get_next();
 	}
 	(*ptr).set_next(node);
+  nbr_elts_++;
 }
 
 void List::popback(){
@@ -36,6 +37,7 @@ void List::popback(){
 		ptr=(*ptr).get_next();
 	}
 	delete ptr;
+  nbr_elts_--;
 }
 
 int List::get_nbr_elts(){
