@@ -10,7 +10,7 @@ class Node{
   Node(const Node& model);
   Node(const Vector& model);
   Node();
-  Node(Node* ptra,void* ptrb);
+  Node(Node* ptra,Vector* ptrb);
   Vector* get_obj();
   Node* get_next();
   void set_obj(Vector* model);

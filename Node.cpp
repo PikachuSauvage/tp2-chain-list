@@ -3,10 +3,8 @@
 
 
 Node::Node(const Vector& model){
-  Vector* newadr = new Vector;
-  Vector newobj = Vector(model);
+  obj = new Vector(model);
   next=NULL;
-  obj=newadr;
 }
 
 //Getters
@@ -42,10 +40,10 @@ Node::Node(const Node& model){
   else{
     next = nullptr;
     }
-  obj = new Vector(model.obj);
+  obj = new Vector(*model.obj);
   }
 
-Node::Node(Node* ptra,void* ptrb){
+Node::Node(Node* ptra,Vector* ptrb){
   next=ptra;
   obj=ptrb;
 }
