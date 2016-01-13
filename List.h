@@ -1,19 +1,15 @@
-#ifndef VECTOR_H
-#define VECTOR_H
-#define Node
+#ifndef LIST_H
+#define LIST_H
+#include "Node.h"
 
 class List{
-	
-  protected :
-    Node* list.head_;
+  protected:
+    Node* head_;
     int nbr_elts_;
-    
+  public:
+    List();
+    List(const List& liste);
+    List(Node* head);
 
-  private :
-  
-  public :
-
-
-
-
-}
+};
+#endif

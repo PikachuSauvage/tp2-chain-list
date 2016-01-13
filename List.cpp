@@ -1,8 +1,9 @@
-#define "Vector.h"
-#define "Node.h"
+#include "Vector.h"
+#include "Node.h"
+#include "List.h"
 #include <stdio.h>
 #include <iostream>
-#include <cstdlib>
+#include <cstddef>
 
 //Constructeur
 
@@ -12,12 +13,12 @@ List::List(){
 }
 
 List::List(const List& liste){
-  head_=liste.start;
-  nbr_elts_=0;
+  head_=new Node(*liste.head_);
+  nbr_elts_=liste.nbr_elts_;
 }
 
-List::List(Node){
-  head_*=Node;
+List::List(Node* head){
+  head_=head;
   nbr_elts_=1;
 }
 
