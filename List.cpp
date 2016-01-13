@@ -59,3 +59,7 @@ int List::get_nbr_elts(){
     return nbr_elts_;
 }
 
+
+List::~List(){
+  delete head_;
+}
