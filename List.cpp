@@ -37,3 +37,7 @@ void List::popback(){
 	}
 	delete ptr;
 }
+
+int List::get_nbr_elts(){
+    return nbr_elts_;
+}

@@ -10,6 +10,7 @@ class List{
     List();
     List(const List& liste);
     List(Node* head);
+    int get_nbr_elts();
     void pushback(Node* node);
     void popback();
 };
