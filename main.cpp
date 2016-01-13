@@ -14,10 +14,10 @@ int main(){
   Node n1=Node(v1);
   Node n2=Node(v2);
   List L1=List(&n1);
+  printf("ok\n");
   L1.pushback(&n2);
-  
-  printf("%d",L1.get_nbr_elts());
-
-  return 0;
-  
+  printf("ok\n");
+  printf("%d\n",L1.get_nbr_elts());
+  printf("problem\n");
+  return 0; 
 }
