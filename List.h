@@ -10,6 +10,7 @@ class List{
     List();
     List(const List& liste);
     List(Node* head);
-
+    void pushback(Node* node);
+    void popback();
 };
 #endif

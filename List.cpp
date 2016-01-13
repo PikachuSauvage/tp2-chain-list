@@ -22,10 +22,18 @@ List::List(Node* head){
   nbr_elts_=1;
 }
 
-/*
-List::insert(Node node){
-  Node*=
-  head_*=Node.next;
+void List::pushback(Node* node){
+	Node* ptr=head_;
+	while((*ptr).get_next()!=nullptr){
+		ptr=(*ptr).get_next();
+	}
+	(*ptr).set_next(node);
+}
 
-//
-*/
+void List::popback(){
+	Node* ptr=head_;
+	while((*ptr).get_next()!=nullptr){
+		ptr=(*ptr).get_next();
+	}
+	delete ptr;
+}
