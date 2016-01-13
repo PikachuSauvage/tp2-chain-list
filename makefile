@@ -10,10 +10,10 @@ Node.o: Node.cpp Node.h
 	g++ -g -c Node.cpp -o Node.o -std=c++11
 
 Vector.o: Vector.cpp Vector.h
-	g++ -g -c Vector.cpp -o Vector.o
+	g++ -g -c Vector.cpp -o Vector.o -std=c++11
 
 List.o: List.cpp List.h
-	g++ -g -c List.cpp -o List.o
+	g++ -g -c List.cpp -o List.o -std=c++11
 
 clean:
 	rm -f *.o
