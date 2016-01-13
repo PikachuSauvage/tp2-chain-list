@@ -11,6 +11,7 @@ class List{
     List(const List& liste);
     List(Node* head);
     int get_nbr_elts();
+    void insert(Node* node, int position);
     void pushback(Node* node);
     void popback();
 };
