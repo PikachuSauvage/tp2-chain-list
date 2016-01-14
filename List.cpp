@@ -17,17 +17,17 @@ List::List(const List& liste){
   nbr_elts_=liste.nbr_elts_;
 }
 
-List::List(Node* head){
-  head_=head;
+List::List(Vector* head){
+  head_=new Node(*head);
   nbr_elts_=1;
 }
 
-void List::pushback(Node* node){
+void List::pushback(Vector* vector){
 	Node* ptr=head_;
 	while((*ptr).get_next()!=nullptr){
 		ptr=(*ptr).get_next();
 	}
-	(*ptr).set_next(node);
+	(*ptr).set_next(new Node(*vector));
   nbr_elts_++;
 }
 
@@ -40,10 +40,11 @@ void List::popback(){
   nbr_elts_--;
 }
 
-void List::insert(Node* node, int position){
+void List::insert(Vector* vector, int position){
+    Node* node = new Node(*vector);
     if(position==0){
       (*node).set_next(head_);
-      head_=node;
+      head_= node;
     }
     else{
       Node* ptr=head_;

@@ -1,7 +1,6 @@
 #ifndef NODE_H
 #define NODE_H
 #include "Vector.h"
-#include "List.h"
 
 class Node{
   friend class List;

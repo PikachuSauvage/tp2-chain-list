@@ -9,11 +9,11 @@ class List{
   public:
     List();
     List(const List& liste);
-    List(Node* head);
+    List(Vector* head);
     ~List();
     int get_nbr_elts();
-    void insert(Node* node, int position);
-    void pushback(Node* node);
+    void insert(Vector* node, int position);
+    void pushback(Vector* node);
     void popback();
 };
 #endif
