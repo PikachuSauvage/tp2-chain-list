@@ -45,21 +45,26 @@ void List::insert(Vector* vector, int position){
     if(position==0){
       (*node).set_next(head_);
       head_= node;
+      nbr_elts_++;
     }
-    else{
+    else if(position<=nbr_elts_){
       Node* ptr=head_;
       for(int i=0;i<position-1;i++){
           ptr=(*ptr).get_next();
       }
       (*node).set_next((*ptr).get_next());
       (*ptr).set_next(node);
+      nbr_elts_++;
+    }
+    else{
+      printf("Erreur, tentative d'insérer après l'élément %d sur une liste "
+      "de longueur %d.\n",position,nbr_elts_);
     }
 }
 
 int List::get_nbr_elts(){
     return nbr_elts_;
 }
-
 
 List::~List(){
   delete head_;

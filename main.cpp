@@ -11,9 +11,10 @@ int main(){
   Vector* v2=new Vector(3,4);
   Vector* v3=new Vector(*v2);
   List* L1=new List(v2);
-  (*L1).pushback(v3);
+  (*L1).insert(v3,1);
+  (*L1).insert(v3,1);
   
-  printf("%d",(*L1).get_nbr_elts());
+  printf("%d\n",(*L1).get_nbr_elts());
 
   return 0;
   
