@@ -1,15 +1,17 @@
 #ifndef NODE_H
 #define NODE_H
 #include "Vector.h"
+#include "List.h"
 
 class Node{
+  friend class List;
  protected:
   Vector* obj;
   Node* next;
- public:
   Node(const Node& model);
   Node(const Vector& model);
   Node();
+ public:
   Node(Node* ptra,Vector* ptrb);
   Vector* get_obj();
   Node* get_next();
